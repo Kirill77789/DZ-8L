@@ -14,16 +14,16 @@ function time_definition($array){//В этой функции двумя спо�
         $time_2 = microtime();
         $result = $time_2 - $time_1;
         $text []= 'Воспользовавшись функцией <b>in_array</b> удалось определить, что число '.$_POST['numeric'].
-            ' присутствует в массиве за '.$result.'<br>';
-        $recording = file_get_contents('text.txt');
+            ' присутствует в массиве за '.$result.' <br>'."\n";
+        /*$recording = file_get_contents('text.txt');
         $string = implode('', $text);
-        file_put_contents('text.txt', $recording.$string."\n");
+        file_put_contents('text.txt', $recording.$string."\n");*/
     }else{
         $text []= 'Воспользовавшись функцией <b>in_array</b> удалось определить, что число '.$_POST['numeric'].
-            ' не содержится в массиве'."\n";
-        $recording = file_get_contents('text.txt');
+            ' не содержится в массиве'.' <br>'."\n";
+        /*$recording = file_get_contents('text.txt');
         $string = implode('', $text);
-        file_put_contents('text.txt', $recording.$string."\n");
+        file_put_contents('text.txt', $recording.$string."\n");*/
     };
     $time_1 = microtime();
     foreach($array as $key => $value){//Второй способ поиска
